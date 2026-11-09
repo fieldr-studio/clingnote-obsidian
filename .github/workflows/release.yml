@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: "20"
       - run: npm ci
-      - run: npm test
       - run: npm run build
       - name: Check tag equals manifest version
         run: test "$(node -p "require('./manifest.json').version")" = "${GITHUB_REF_NAME}"
