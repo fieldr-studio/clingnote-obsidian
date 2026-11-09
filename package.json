@@ -1,0 +1,21 @@
+{
+  "name": "clingnote-obsidian",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClingNote for Obsidian: notes that follow the Windows files, folders, apps and web pages you work in.",
+  "main": "main.js",
+  "scripts": {
+    "typecheck": "tsc -noEmit -skipLibCheck",
+    "build": "npm run typecheck && node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "test": "tsc -p tsconfig.test.json && node --test \"build-test/test/*.test.js\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "latest",
+    "tslib": "^2.6.0",
+    "typescript": "^5.5.0"
+  }
+}

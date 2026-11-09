@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "build-test",
+    "rootDir": ".",
+    "lib": ["DOM", "ES2022"],
+    "types": ["node"]
+  },
+  "include": [
+    "src/types.ts",
+    "src/client.ts",
+    "src/mappings.ts",
+    "src/follower.ts",
+    "src/group-view.ts",
+    "test/**/*.ts"
+  ]
+}

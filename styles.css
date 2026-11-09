@@ -1,0 +1,97 @@
+.clingnote-status { cursor: pointer; }
+.clingnote-pause-option { display: block; margin: 8px 0; width: 100%; }
+.clingnote-attachment button { margin: 4px 8px 4px 0; }
+.clingnote-status { max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.clingnote-status:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.clingnote-attached { color: var(--text-accent); }
+.clingnote-settings .setting-item-info { min-width: 0; }
+.clingnote-settings .setting-item-name,
+.clingnote-settings .setting-item-description,
+.clingnote-context p,
+.clingnote-attachment p,
+.clingnote-location { overflow-wrap: anywhere; white-space: normal; }
+.clingnote-settings .setting-item-control { flex-wrap: wrap; }
+.clingnote-settings details { margin: 12px 0; }
+.clingnote-settings summary { cursor: pointer; color: var(--text-normal); }
+.clingnote-welcome { padding: 12px; border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m); }
+.clingnote-context { color: var(--text-normal); }
+.clingnote-location { color: var(--text-muted); font-size: var(--font-smaller); }
+/* ClingNote sidebar (0.17). Theme tokens only; no vault layout is changed. */
+.clingnote-groups { padding: 0 var(--size-4-2) var(--size-4-4); }
+.clingnote-sb-header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: var(--size-4-1);
+    padding: var(--size-4-2) 0 var(--size-4-1); background: var(--background-secondary); }
+.clingnote-panel-title { font-size: var(--font-ui-small); font-weight: var(--font-semibold); color: var(--text-normal); letter-spacing: .02em; }
+.clingnote-sb-actions { display: flex; align-items: center; gap: 2px; }
+.clingnote-sb-search { display: none; padding: 0 0 var(--size-4-2); }
+.clingnote-sb-search.is-open { display: block; }
+.clingnote-sb-search input { width: 100%; }
+.clingnote-group-control { flex-shrink: 0; }
+.clingnote-group-status, .clingnote-group-empty { color: var(--text-muted); font-size: var(--font-ui-smaller); padding: var(--size-4-1) 0; overflow-wrap: anywhere; }
+.clingnote-group-status:empty { display: none; }
+
+.clingnote-group, .clingnote-unattached { margin: 2px 0; border-radius: var(--radius-s); }
+.clingnote-group.is-active-context { background: color-mix(in srgb, var(--clingnote-accent, var(--interactive-accent)) 10%, transparent); box-shadow: inset 2px 0 0 var(--clingnote-accent, var(--interactive-accent)); }
+.clingnote-unattached { margin-top: var(--size-4-3); padding-top: var(--size-4-1); border-top: 1px solid var(--background-modifier-border); }
+.clingnote-group-heading, .clingnote-group-note { display: flex; align-items: center; gap: var(--size-4-1); min-height: 26px; }
+.clingnote-groups button.clingnote-group-toggle { display: flex; align-items: center; justify-content: flex-start; flex: 1; min-width: 0; gap: var(--size-4-1); height: 26px; padding: 0 var(--size-4-1);
+    background: transparent; border: 0; box-shadow: none; color: var(--text-normal); text-align: left; cursor: pointer; border-radius: var(--radius-s); }
+.clingnote-groups button.clingnote-group-toggle:hover { background: var(--background-modifier-hover); }
+.clingnote-chevron, .clingnote-group-icon, .clingnote-note-marker { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--text-faint); }
+.clingnote-chevron svg, .clingnote-group-icon svg, .clingnote-note-marker svg, .clingnote-shared svg { width: 14px; height: 14px; }
+.clingnote-group-icon { width: 18px; color: var(--text-muted); }
+.clingnote-group-icon.is-emoji { font-size: 14px; line-height: 1; max-width: 22px; overflow: hidden; white-space: nowrap; }
+.clingnote-group.is-active-context .clingnote-group-icon { color: var(--clingnote-accent-text, var(--text-accent)); }
+.clingnote-group-title, .clingnote-groups button.clingnote-note-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
+.clingnote-group-title { font-size: var(--font-ui-small); font-weight: var(--font-medium); }
+.clingnote-group-count { flex-shrink: 0; color: var(--text-faint); font-size: var(--font-ui-smaller); }
+.clingnote-group-notes { padding-bottom: var(--size-4-1); }
+.clingnote-group-note { padding-right: 2px; border-radius: var(--radius-s); }
+.clingnote-group-note.is-main { padding-left: 22px; }
+.clingnote-group-note.is-related { padding-left: 40px; }
+.clingnote-group-note.is-unattached { padding-left: 22px; }
+.clingnote-group-note.is-main .clingnote-note-marker { color: var(--clingnote-accent-text, var(--text-accent)); }
+.clingnote-group-note.is-main .clingnote-note-marker svg { fill: currentColor; }
+.clingnote-group-note.is-main .clingnote-note-name { font-weight: var(--font-medium); }
+.clingnote-groups button.clingnote-note-name { display: block; justify-content: flex-start; text-align: left; background: transparent; box-shadow: none; border: 0; padding: 0 var(--size-4-1); height: 24px; line-height: 24px; color: var(--text-normal); font-size: var(--font-ui-small); cursor: pointer; }
+.clingnote-group-note:hover, .clingnote-group-note.is-current-note { background: var(--background-modifier-hover); }
+.clingnote-group-note.is-active-main .clingnote-note-name { color: var(--clingnote-accent-text, var(--text-accent)); }
+.clingnote-group-note.is-active-main { background: color-mix(in srgb, var(--clingnote-accent, var(--interactive-accent)) 16%, transparent); }
+.clingnote-shared { display: inline-flex; align-items: center; gap: 2px; flex-shrink: 0; color: var(--text-faint); font-size: var(--font-ui-smaller); cursor: pointer; }
+.clingnote-shared:hover { color: var(--clingnote-accent-text, var(--text-accent)); }
+.clingnote-group-note .clingnote-group-control, .clingnote-group-heading .clingnote-group-control { opacity: 0; }
+.clingnote-group-note:hover .clingnote-group-control, .clingnote-group-note:focus-within .clingnote-group-control,
+.clingnote-group-heading:hover .clingnote-group-control, .clingnote-group-heading:focus-within .clingnote-group-control { opacity: 1; }
+
+.clingnote-groups button:focus-visible { outline: 2px solid var(--clingnote-accent, var(--interactive-accent)); outline-offset: -2px; }
+.clingnote-groups button:disabled { opacity: .5; }
+.clingnote-main-label { color: var(--text-muted); font-size: var(--font-ui-smaller); flex-shrink: 0; }
+
+/* Icon picker and attached-contexts dialogs */
+.clingnote-icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 4px; margin: var(--size-4-3) 0; max-height: 220px; overflow-y: auto; }
+.clingnote-icon-choice { width: 34px; height: 34px; }
+.clingnote-icon-emoji { display: flex; gap: var(--size-4-2); margin-bottom: var(--size-4-2); }
+.clingnote-icon-emoji input { flex: 1; }
+.clingnote-attached-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--size-4-2); padding: var(--size-4-2) 0; border-bottom: 1px solid var(--background-modifier-border); }
+.clingnote-attached-title { flex: 1; min-width: 120px; overflow-wrap: anywhere; }
+
+/* Pause: a quiet badge; the sidebar keeps its last highlight. */
+.clingnote-sb-titlerow { display: flex; align-items: center; gap: var(--size-4-2); min-width: 0; }
+.clingnote-groups button.clingnote-paused-badge { height: 18px; padding: 0 var(--size-4-2); border-radius: 9px; font-size: var(--font-ui-smaller); line-height: 18px;
+    background: var(--background-modifier-border); color: var(--text-muted); box-shadow: none; border: 0; cursor: pointer; }
+.clingnote-groups button.clingnote-paused-badge:hover { color: var(--text-normal); }
+
+/* Drag and drop: valid targets get an accent outline, an insertion line shows where a note lands, invalid targets are dimmed. */
+.clingnote-group-heading.is-drop-target, .clingnote-group-note.is-drop-target { outline: 1px solid var(--clingnote-accent, var(--interactive-accent)); outline-offset: -1px; background: color-mix(in srgb, var(--clingnote-accent, var(--interactive-accent)) 14%, transparent); border-radius: var(--radius-s); }
+.clingnote-group-note.is-drop-before { box-shadow: inset 0 2px 0 0 var(--clingnote-accent, var(--interactive-accent)); }
+.clingnote-group-heading.is-drop-invalid, .clingnote-group-note.is-drop-invalid { opacity: .55; cursor: not-allowed; }
+.clingnote-group-note[draggable="true"] { cursor: grab; }
+
+/* Accent controls */
+.clingnote-accent-row { display: flex; flex-wrap: wrap; gap: var(--size-4-2); margin: var(--size-4-2) 0; }
+.clingnote-accent-row button.clingnote-swatch { width: 24px; height: 24px; min-width: 24px; padding: 0; border-radius: 50%; border: 2px solid transparent; background: var(--swatch, var(--interactive-accent)); box-shadow: none; cursor: pointer; }
+.clingnote-accent-row button.clingnote-swatch.is-default { background: conic-gradient(var(--interactive-accent), var(--background-modifier-border), var(--interactive-accent)); }
+.clingnote-accent-row button.clingnote-swatch.is-selected { border-color: var(--text-normal); }
+.clingnote-accent-custom { display: flex; align-items: center; gap: var(--size-4-2); }
+.clingnote-groups .clingnote-paused-badge[hidden] { display: none; }
+.clingnote-connection-notice:empty { display: none; }
+.clingnote-connection-notice a { margin-left: var(--size-4-1); }

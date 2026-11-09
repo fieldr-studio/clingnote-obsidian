@@ -1,0 +1,10 @@
+{
+  "id": "clingnote",
+  "name": "ClingNote",
+  "version": "1.0.0",
+  "minAppVersion": "1.14.4",
+  "description": "Attach notes to the Windows files, folders, apps and web pages you work in. Pro automatically opens the right note when you switch back. Requires the separate free ClingNote companion for Windows.",
+  "author": "ClingNote",
+  "isDesktopOnly": true,
+  "authorUrl": "https://clingnote.com"
+}
