@@ -1,4 +1,4 @@
-# Prepared, NOT active until the repository is published and a tag is pushed. Builds the three Obsidian release assets from a version tag.
+# Builds the three Obsidian release assets from a version tag.
 # The tag must equal the version in manifest.json (no leading "v"), as the Community Plugins review requires.
 name: Release
 on:
@@ -23,4 +23,5 @@ jobs:
       - name: Create release with the three assets
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" main.js manifest.json styles.css --title "${GITHUB_REF_NAME}" --notes "ClingNote for Obsidian ${GITHUB_REF_NAME}. Requires the separate ClingNote companion for Windows: https://clingnote.com/obsidian"
+        run: |
+          gh release create "${GITHUB_REF_NAME}" main.js manifest.json styles.css             --title "${GITHUB_REF_NAME}"             --notes "ClingNote for Obsidian ${GITHUB_REF_NAME}. Requires the separate ClingNote companion for Windows, available at https://clingnote.com/obsidian"
